@@ -1,0 +1,92 @@
+.container {
+    max-width: $full-width - 20%;
+    @extend .justify;
+    @include margin-top(60px);
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, 300px);
+    justify-content: center;
+}
+
+.choice-item {
+    @include bg-color(aliceblue);
+    text-align: center;
+}
+
+.my-img {
+    @extend .position-rel;
+    --aspect-raito: 3/2;
+    height: 0;
+    padding-bottom: calc(100% / (var(--aspect-raito)));
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.title {
+    @extend .position-rel;
+    top: -140px;
+    @include text-color(white);
+    font-size: $font-size-nor + 12;
+}
+
+.price {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    font-size: 22px;
+    margin: 0 auto;
+    color: blue;
+    bottom: 340px;
+    padding-top: 12%;
+}
+
+.subtitle {
+    @include bg-color(aliceblue);
+    padding-top: 20px;
+    @include margin-top(-65%);
+    :first-child {
+        font-size: $font-size-nor + 4;
+    }
+    :last-child {
+        font-size: $font-size-nor - 4;
+        @include margin-top(-15px);
+    }
+}
+
+ul {
+    list-style-type: none;
+    li {
+        margin: 5%;
+        margin-left: -5%;
+    }
+}
+
+@each $list in $list-item {
+    .#{$list}-1 {
+        @include bg-color(beige);
+        height: 30px;
+        padding-top: 3%;
+    }
+}
+
+button {
+    padding: 3%;
+    border-color: blue;
+    @include text-color(blue);
+    margin: 5%;
+    max-width: 150px;
+    width: $full-width - 50%;
+    cursor: pointer;
+    &:hover {
+        @include bg-color(blue);
+        @include text-color(white);
+        box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+}
