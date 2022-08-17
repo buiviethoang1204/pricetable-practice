@@ -14,6 +14,7 @@
 }
 
 .my-img {
+    background-position: 0 0;
     position: relative;
     --aspect-raito: 3/2;
     height: 0;
@@ -69,7 +70,8 @@
     position: relative;
     top: -120px;
     @include text-color(white);
-    font-size: $font-size-nor + 12;
+    font-size: $font-size-nor + 16;
+    font-weight: bolder;
     &-small {
         font-size: 12px;
         margin-top: 10px;
@@ -96,7 +98,7 @@
 
 ul {
     li {
-        margin: 20px;
+        margin: 20px 0 20px 0;
         @include text-color(rgba(105, 123, 135, 255));
     }
     & :nth-child(odd) {
