@@ -1,7 +1,10 @@
 .container {
+    & .choice-item:not(:first-child) {
+        display: none;
+    }
     max-width: $full-width - 20%;
     margin: 0 auto;
-    @include margin-top(100px);
+    @include margin-top(50px);
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fit, 300px);
@@ -144,5 +147,20 @@ ul {
     border-color: rgba(50, 173, 30, 255);
     &:hover {
         @include bg-color(rgba(50, 173, 30, 255));
+    }
+}
+
+.btn-change {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-100%);
+    cursor: pointer;
+    &#next {
+        right: 10px;;
+    }
+    &#prev {
+        left: 10px;
     }
 }

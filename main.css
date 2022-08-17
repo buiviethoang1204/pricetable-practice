@@ -29,7 +29,7 @@ ul {
 .container {
   max-width: 80%;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 50px;
   display: -ms-grid;
   display: grid;
   grid-gap: 20px;
@@ -38,6 +38,10 @@ ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.container .choice-item:not(:first-child) {
+  display: none;
 }
 
 .choice-item {
@@ -190,6 +194,24 @@ ul :nth-child(odd) {
 
 .btn-3:hover {
   background-color: #32ad1e;
+}
+
+.btn-change {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  cursor: pointer;
+}
+
+.btn-change#next {
+  right: 10px;
+}
+
+.btn-change#prev {
+  left: 10px;
 }
 
 @media (max-width: 1190px) and (min-width: 792px) {
