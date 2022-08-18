@@ -23,7 +23,7 @@ prev.addEventListener("click", ()=> {
     displayItem();
 })
 function displayItem() {
-    document.querySelectorAll(".choice-item").forEach((item, index) => {
+    items.forEach((item, index) => {
         item.style.display = "none";
         if (index === i) {
             item.style.display = "block";            
