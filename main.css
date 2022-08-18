@@ -97,7 +97,7 @@ ul {
 }
 
 .new {
-  background-image: url(/img/newmark.png);
+  background-image: url(./img/newmark.png);
   background-repeat: no-repeat;
   position: relative;
   padding-bottom: calc(100% / (var(--aspect-raito)));
