@@ -50,7 +50,7 @@ ul {
 }
 
 .my-img {
-  background-position: 0 0;
+  background-size: contain;
   position: relative;
   --aspect-raito: 3/2;
   height: 0;
@@ -105,7 +105,7 @@ ul {
   left: -110px;
   color: white;
   font-size: 14px;
-  padding-top: 26px;
+  padding-top: 27px;
   padding-right: 30px;
 }
 
@@ -124,7 +124,7 @@ ul {
 }
 
 .subtitle {
-  padding-bottom: 10px;
+  margin-top: -10px;
   background-color: aliceblue;
   color: #5f727f;
 }
@@ -139,7 +139,7 @@ ul {
 }
 
 .subtitle-2 {
-  margin-top: -22px;
+  margin-top: -32px;
 }
 
 ul li {
@@ -150,7 +150,7 @@ ul li {
 ul :nth-child(odd) {
   background-color: #e6f6f7;
   height: 40px;
-  padding-top: 3%;
+  padding-top: 3.5%;
 }
 
 .btn {
@@ -214,15 +214,47 @@ ul :nth-child(odd) {
   left: 10px;
 }
 
-@media (max-width: 1190px) and (min-width: 792px) {
-  .choice-3 {
-    margin-top: 50px;
+@-webkit-keyframes slideLeft {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
-@media (max-width: 791px) {
-  .choice-2, .choice-3 {
-    margin-top: 50px;
+@keyframes slideLeft {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes slideRight {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 /*# sourceMappingURL=main.css.map */

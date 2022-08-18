@@ -1,31 +1,32 @@
 let i = 0;
 let lastI = document.querySelector(".choice-3").getAttribute("idx");
+let lastIndex = + lastI;
+const items = document.querySelectorAll(".choice-item");
 const next = document.querySelector("#next");
 const prev = document.querySelector("#prev");
-next.addEventListener("click", function () {
-    console.log(i);
-    if (++i > lastI) {
+next.addEventListener("click", ()=> {
+    if (++i > lastIndex) {
         i = 0;
     }
+    items.forEach((item)=> {
+        item.style.animation = "slideRight 1s ease-in-out forwards";
+    })
     displayItem();
 });
-prev.addEventListener("click", ()=>{
-    console.log(i);
+prev.addEventListener("click", ()=> {
     if (--i < 0) {
-        console.log(lastI);
-        i = lastI;
-        console.log(i);
+        i = lastIndex;
     }
+    items.forEach((item)=> {
+        item.style.animation = "slideLeft 1s ease-in-out forwards";
+    })
     displayItem();
 })
-
 function displayItem() {
-    document.querySelectorAll(".choice-item").forEach((item) => {
-        item.style.display = "none";
-    });
     document.querySelectorAll(".choice-item").forEach((item, index) => {
+        item.style.display = "none";
         if (index === i) {
-            item.style.display = "block";
+            item.style.display = "block";            
         }
     });
 }
