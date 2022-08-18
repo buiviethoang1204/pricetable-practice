@@ -1,0 +1,11 @@
+@mixin bg-color($bg-color) {
+    background-color: $bg-color;
+}
+
+@mixin margin-top($dis) {
+    margin-top: $dis;
+}
+
+@mixin text-color($text-color) {
+    color: $text-color;
+}
